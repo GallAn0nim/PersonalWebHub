@@ -1,0 +1,141 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+
+# Windows image file caches
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Ignore all Recycle Bin files on network or shared drives
+*.lnk
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+#  .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.config
+*.mso
+*.out
+*.tlb
+*.tlh
+*.tmp
+*.log
+
+# DotNet specific
+obj/
+bin/
+*.gpState
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Npm Packages
+node_modules/
+
+# =========================
+# Rider
+# =========================
+.idea/
+*.sln.iml
+# Rider logs and data
+.idea/*/shelf/
+.idea/*/workspace.xml
+.idea/*/tasks.xml
+.idea/*/codeStyles/
+.idea/*/jsLibraryMappings.xml
+.idea/*/modules.xml
+.idea/*/description.html
+.idea/*/deployment.xml
+.idea/*/gradle.xml
+.idea/*/codeStyleSettings.xml
+.idea/*/databaseDrivers.xml
+.idea/*/databaseLibraries.xml
+.idea/*/dataSources.ids
+.idea/*/dataSources.xml
+.idea/*/workspace.xml
+.idea/*/libraries/
+
+# Rider backup files
+*.rider.temp/
+*.rider-backups/
+
+# =========================
+# Visual Studio
+# =========================
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio working files
+.vs/
+.vscode/
+.vscode/*
+.vscode/launch.json
+.vscode/tasks.json
+
+# JetBrains Rider
+.idea/
+.idea/*
+
+# ASP.NET Core Environment Variables
+.env
+.env.*
+
+# ASP.NET Core static files and logs
+wwwroot/
+logs/
+iisExpress/
+logs/
+
+# Local History for Visual Studio Code
+.localhistory
+
+# ASP.NET Core secrets (for development only)
+secrets.json
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Windows crash reports
+*.stackdump
+*.crash
