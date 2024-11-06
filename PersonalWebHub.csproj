@@ -12,4 +12,45 @@
     <PackageReference Include="Scalar.AspNetCore" Version="1.2.29" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="PersonalWebHubXUnitTest\**" />
+    <Compile Remove="PersonalWebHubXUnit.Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="PersonalWebHubXUnitTest\**" />
+    <EmbeddedResource Remove="PersonalWebHubXUnit.Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="PersonalWebHubXUnitTest\**" />
+    <Content Remove="PersonalWebHubXUnit.Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="PersonalWebHubXUnitTest\**" />
+    <None Remove="PersonalWebHubXUnit.Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnitTest\obj\PersonalWebHubXUnitTest.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnitTest\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnitTest\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\appsettings.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHub.deps.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHub.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHub.staticwebassets.endpoints.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnitTest.deps.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnitTest.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\Debug\net9.0\PersonalWebHubXUnitTest.sourcelink.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\PersonalWebHubXUnit.Test.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\PersonalWebHubXUnitTest.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnit.Test.deps.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnit.Test.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\Debug\net9.0\PersonalWebHubXUnit.Test.sourcelink.json" />
+  </ItemGroup>
+
 </Project>

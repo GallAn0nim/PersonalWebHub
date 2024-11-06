@@ -11,7 +11,7 @@ namespace PersonalWebHub.Models.Rpg.Requests
         public int NumberOfRolls { get; set; } = 1;
                
         [DefaultValue(RandomnessMethods.CSharpRandom)]
-        public RandomnessMethods RandomnessMethods { get; set; } = RandomnessMethods.CSharpRandom;
+        public RandomnessMethods RandomnessMethod { get; set; } = RandomnessMethods.CSharpRandom;
 
         [Required]
         [DefaultValue("1d20+11")]
