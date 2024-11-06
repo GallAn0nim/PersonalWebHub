@@ -216,7 +216,7 @@ namespace PersonalWebHub.Services.Rpg.Implementation
         {
             var firstIndex = modifiableFormula.IndexOf(matchedDieValue, StringComparison.OrdinalIgnoreCase);
             modifiableFormula = modifiableFormula[..firstIndex] + rollsStatisticResultSum +
-                                modifiableFormula[(int)(firstIndex + matchedDieLength)..];
+                                modifiableFormula[(int)(firstIndex + matchedDieLength)!..];
 
             return modifiableFormula;
         }

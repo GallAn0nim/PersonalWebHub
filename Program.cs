@@ -1,22 +1,22 @@
 using PersonalWebHub.Services.Rpg.Implementation;
 using PersonalWebHub.Services.Rpg.Interfaces;
 using System.Security.Cryptography;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
+builder.Services.AddOpenApi();
 
 builder.Services.AddCors(options => options.AddPolicy("AllowAll",
     policyBuilder =>
     {
-        policyBuilder.AllowAnyOrigin()  
-            .AllowAnyMethod()  
-            .AllowAnyHeader(); 
+        policyBuilder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
     }));
 
 builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =>
 {
@@ -31,16 +31,18 @@ builder.Services.AddSingleton<Random>();
 builder.Services.AddSingleton<RandomNumberGenerator>(_ => RandomNumberGenerator.Create());
 builder.Services.AddScoped<IDiceRollService, DiceRollService>();
 
-
 var app = builder.Build();
+app.MapOpenApi();
+app.MapScalarApiReference(options =>
+{
+    options
+        .WithTitle("Personal Web Hub")
+        .WithTheme(ScalarTheme.Moon)
+        .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient);
+});
 
-app.UseSwagger();
-app.UseSwaggerUI();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
