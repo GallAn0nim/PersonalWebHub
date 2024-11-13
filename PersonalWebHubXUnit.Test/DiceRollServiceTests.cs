@@ -4,6 +4,7 @@ using PersonalWebHub.Models.Rpg.Enum;
 using PersonalWebHub.Models.Rpg.Requests;
 using PersonalWebHub.Services.Rpg.Implementation;
 using PersonalWebHub.Services.Rpg.Interfaces;
+
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
 
 namespace PersonalWebHubXUnit.Test
@@ -221,7 +222,7 @@ namespace PersonalWebHubXUnit.Test
                 RandomnessMethod = RandomnessMethods.CSharpCryptographyRandomNumberGenerator
             };
             _rngMock.Setup(r => r.GetBytes(It.IsAny<byte[]>()))
-                .Callback<byte[]>(b => b[0] = 0); // Mocked byte for predictable CryptoRandom
+                .Callback<byte[]>(b => b[0] = 0);
 
             // Act
             var response = _diceRollService.RollDice(request);
@@ -231,10 +232,7 @@ namespace PersonalWebHubXUnit.Test
             Assert.Equal(numberOfRolls, response.NumberOfRolls);
             Assert.Equal(RandomnessMethods.CSharpCryptographyRandomNumberGenerator, response.RandomnessMethod);
             Assert.Equal(numberOfRolls, response.DiceRolls.Count);
-            Assert.All(response.DiceRolls, roll =>
-            {
-                Assert.Contains(roll.Result, customPattern);
-            });
+            Assert.All(response.DiceRolls, roll => { Assert.Contains(roll.Result, customPattern); });
         }
 
         [Theory]
@@ -253,7 +251,7 @@ namespace PersonalWebHubXUnit.Test
                 Max = max
             };
             _rngMock.Setup(r => r.GetBytes(It.IsAny<byte[]>()))
-                .Callback<byte[]>(b => b[0] = 0); // Mocked byte for predictable CryptoRandom
+                .Callback<byte[]>(b => b[0] = 0);
 
             // Act
             var response = _diceRollService.RandomnessMethodsDistribution(request,
