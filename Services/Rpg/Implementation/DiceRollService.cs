@@ -137,7 +137,7 @@ namespace PersonalWebHub.Services.Rpg.Implementation
 
         private static FormulaRollResponse PrepareResponse(FormulaRollRequest rollPlan, FormulaRollResponse diceRolls)
         {
-            diceRolls.RandomnessMethod = rollPlan.RandomnessMethods;
+            diceRolls.RandomnessMethod = rollPlan.RandomnessMethod;
             diceRolls.NumberOfRolls = rollPlan.NumberOfRolls;
             diceRolls.Formula = rollPlan.RollFormula;
 
@@ -216,7 +216,7 @@ namespace PersonalWebHub.Services.Rpg.Implementation
         {
             var firstIndex = modifiableFormula.IndexOf(matchedDieValue, StringComparison.OrdinalIgnoreCase);
             modifiableFormula = modifiableFormula[..firstIndex] + rollsStatisticResultSum +
-                                modifiableFormula[(int)(firstIndex + matchedDieLength)..];
+                                modifiableFormula[(int)(firstIndex + matchedDieLength)!..];
 
             return modifiableFormula;
         }
@@ -390,7 +390,7 @@ namespace PersonalWebHub.Services.Rpg.Implementation
                 throw new ArgumentException("Invalid NumberOfRolls. Number of rolls must be greater then 0.");
             }
 
-            result.RandomnessMethod = request.RandomnessMethods;
+            result.RandomnessMethod = request.RandomnessMethod;
             result.CalculateGeneralStatistic = true;
             result.AssignDiceRange = true;
             result.DiceRollInput.NumberOfRolls = rolls;
