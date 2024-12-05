@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PersonalWebHub.Models.AdventOfCode2024;
 using PersonalWebHub.Services.AdventOfCode2024;
 
 namespace PersonalWebHub.Controllers;
@@ -43,7 +44,7 @@ public class AdventOfCode2024Controller(IAdventOfCode2024Service adventOfCode202
     }
     
     [HttpGet("day/{dayNumber:int}/solution/partTwo")]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AdventOfCode2024SolutionResponse))]
     public IActionResult DayTaskSolutionPartTwo(int dayNumber)
     {
         return Ok(adventOfCode2024Service.GetTaskSolution(dayNumber,true));
