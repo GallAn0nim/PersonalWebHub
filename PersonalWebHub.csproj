@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.2.24474.3" />
     <PackageReference Include="Scalar.AspNetCore" Version="1.2.29" />
   </ItemGroup>
@@ -30,6 +31,9 @@
   <ItemGroup>
     <None Remove="PersonalWebHubXUnitTest\**" />
     <None Remove="PersonalWebHubXUnit.Test\**" />
+    <None Update="Resources\SocialMedia.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +55,10 @@
     <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnit.Test.deps.json" />
     <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnit.Test.runtimeconfig.json" />
     <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\Debug\net9.0\PersonalWebHubXUnit.Test.sourcelink.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

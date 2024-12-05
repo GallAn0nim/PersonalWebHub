@@ -2,7 +2,7 @@
 using PersonalWebHub.Models.Rpg.Requests;
 using PersonalWebHub.Models.Rpg.Responses;
 
-namespace PersonalWebHub.Services.Rpg.Interfaces
+namespace PersonalWebHub.Services.Rpg
 {
     public interface IDiceRollService
     {

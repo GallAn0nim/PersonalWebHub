@@ -1,6 +1,9 @@
-using PersonalWebHub.Services.Rpg.Implementation;
-using PersonalWebHub.Services.Rpg.Interfaces;
 using System.Security.Cryptography;
+using PersonalWebHub.Models.AppSettings;
+using PersonalWebHub.Repositories;
+using PersonalWebHub.Services.AboutMe;
+using PersonalWebHub.Services.Rpg;
+using PersonalWebHub.Services.Tools;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +33,10 @@ builder.Services.Configure<Microsoft.AspNetCore.Mvc.JsonOptions>(options =>
 builder.Services.AddSingleton<Random>();
 builder.Services.AddSingleton<RandomNumberGenerator>(_ => RandomNumberGenerator.Create());
 builder.Services.AddScoped<IDiceRollService, DiceRollService>();
+builder.Services.AddScoped<IAboutMeService, AboutMeService>();
+builder.Services.AddScoped<IObfuscateService, ObfuscateService>();
+builder.Services.AddScoped<IAboutMeRepository, AboutMeRepository>();
+builder.Services.Configure<ObfuscateSettings>(builder.Configuration.GetSection("ObfuscateSettings"));
 
 var app = builder.Build();
 app.MapOpenApi();
