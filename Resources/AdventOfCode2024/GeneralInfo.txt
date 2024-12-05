@@ -1,0 +1,1 @@
+Advent of Code is an annual online event that provides a series of daily programming puzzles throughout December. It starts on December 1st and continues until December 25th, coinciding with the Advent season leading up to Christmas. https://adventofcode.com/
