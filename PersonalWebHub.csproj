@@ -34,6 +34,18 @@
     <None Update="Resources\SocialMedia.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\AdventOfCode2024\GeneralInfo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\AdventOfCode2024\Day1-Params.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\AdventOfCode2024\Day1-Description.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\AdventOfCode2024\Day1-Description-PartTwo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -55,10 +67,6 @@
     <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnit.Test.deps.json" />
     <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\bin\Debug\net9.0\PersonalWebHubXUnit.Test.runtimeconfig.json" />
     <_ContentIncludedByDefault Remove="PersonalWebHubXUnit.Test\obj\Debug\net9.0\PersonalWebHubXUnit.Test.sourcelink.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

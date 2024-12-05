@@ -2,6 +2,7 @@ using System.Security.Cryptography;
 using PersonalWebHub.Models.AppSettings;
 using PersonalWebHub.Repositories;
 using PersonalWebHub.Services.AboutMe;
+using PersonalWebHub.Services.AdventOfCode2024;
 using PersonalWebHub.Services.Rpg;
 using PersonalWebHub.Services.Tools;
 using Scalar.AspNetCore;
@@ -36,6 +37,8 @@ builder.Services.AddScoped<IDiceRollService, DiceRollService>();
 builder.Services.AddScoped<IAboutMeService, AboutMeService>();
 builder.Services.AddScoped<IObfuscateService, ObfuscateService>();
 builder.Services.AddScoped<IAboutMeRepository, AboutMeRepository>();
+builder.Services.AddScoped<IAdventOfCode2024Repository, AdventOfCode2024Repository>();
+builder.Services.AddScoped<IAdventOfCode2024Service, AdventOfCode2024Service>();
 builder.Services.Configure<ObfuscateSettings>(builder.Configuration.GetSection("ObfuscateSettings"));
 
 var app = builder.Build();
