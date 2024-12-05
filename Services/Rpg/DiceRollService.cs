@@ -1,13 +1,13 @@
-﻿using PersonalWebHub.Models.Rpg.Enum;
-using PersonalWebHub.Models.Rpg.Models;
-using PersonalWebHub.Models.Rpg.Requests;
-using PersonalWebHub.Services.Rpg.Interfaces;
-using System.Data;
+﻿using System.Data;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using PersonalWebHub.Models.Rpg.Enum;
+using PersonalWebHub.Models.Rpg.Models;
+using PersonalWebHub.Models.Rpg.Requests;
 using PersonalWebHub.Models.Rpg.Responses;
 
-namespace PersonalWebHub.Services.Rpg.Implementation
+namespace PersonalWebHub.Services.Rpg
 {
     public class DiceRollService(Random rnd, RandomNumberGenerator rng) : IDiceRollService
     {

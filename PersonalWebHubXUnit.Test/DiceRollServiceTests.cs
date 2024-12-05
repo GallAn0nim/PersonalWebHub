@@ -2,8 +2,7 @@
 using Moq;
 using PersonalWebHub.Models.Rpg.Enum;
 using PersonalWebHub.Models.Rpg.Requests;
-using PersonalWebHub.Services.Rpg.Implementation;
-using PersonalWebHub.Services.Rpg.Interfaces;
+using PersonalWebHub.Services.Rpg;
 
 // ReSharper disable ParameterOnlyUsedForPreconditionCheck.Local
 

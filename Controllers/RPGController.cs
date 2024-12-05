@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PersonalWebHub.Models.Rpg.Enum;
 using PersonalWebHub.Models.Rpg.Requests;
-using PersonalWebHub.Services.Rpg.Interfaces;
 using PersonalWebHub.Models.Rpg.Responses;
+using PersonalWebHub.Services.Rpg;
 
 namespace PersonalWebHub.Controllers
 {
@@ -30,11 +30,14 @@ namespace PersonalWebHub.Controllers
 
         [HttpGet("randomnessMethods/{randomnessMethod}/distribution")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(RandomnessMethodsDistributionResponse))]
-        public IActionResult RandomnessMethodDistribution([FromRoute] RandomnessMethods randomnessMethod, [FromQuery] RandomnessMethodsDistributionRequest randomnessMethodsDistributionRequest)
+        public IActionResult RandomnessMethodDistribution([FromRoute] RandomnessMethods randomnessMethod,
+            [FromQuery] RandomnessMethodsDistributionRequest randomnessMethodsDistributionRequest)
         {
             try
             {
-                var response = diceRollService.RandomnessMethodsDistribution(randomnessMethodsDistributionRequest, randomnessMethod);
+                var response =
+                    diceRollService.RandomnessMethodsDistribution(randomnessMethodsDistributionRequest,
+                        randomnessMethod);
                 return Ok(response);
             }
             catch (ArgumentException ex)
@@ -86,5 +89,3 @@ namespace PersonalWebHub.Controllers
         }
     }
 }
-
-
